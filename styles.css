@@ -1,0 +1,74 @@
+.page-container,
+.nav,
+.nav-links-main,
+.nav-links-secondary,
+.header,
+.header-profile,
+.header-welcome,
+.header-actions,
+.header-action,
+.main,
+.projects,
+.projects-title,
+.projects-items,
+.projects-item,
+.announcements,
+.announcements-title,
+.announcements-items,
+.announcements-item,
+.trending,
+.trending-title,
+.trending-items,
+.trending-item {
+    border: solid 1px firebrick
+}
+
+.page-layout {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
+    grid-template-areas: 
+        "nav header header"
+        /* "nav main main"
+        "nav main main"
+        "nav main main" */
+        "nav main main";
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+
+    grid-template-areas: 
+        "projects-title .  announcements-title"
+        "projects projects announcements"
+        "projects projects trending";
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.projects-items {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects-item{
+    /* grid-row: span 2; */
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
